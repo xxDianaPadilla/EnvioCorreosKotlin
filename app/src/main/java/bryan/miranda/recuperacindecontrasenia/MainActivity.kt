@@ -25,7 +25,8 @@ class MainActivity : AppCompatActivity() {
 
         btnEnviar.setOnClickListener {
             CoroutineScope(Dispatchers.Main).launch {
-                enviarCorreo("exequiel.miranda245@gmail.com", "Recuperación de contraseña", "Hola")
+                val codigoRecuperacion = (1000..10000).random()
+                enviarCorreo("Ricardo.profe1999@gmail.com", "Código de recuperación", "No olvide su contraseña, este es su código de recuperación: $codigoRecuperacion")
 
             }
         }
